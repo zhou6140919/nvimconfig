@@ -24,3 +24,7 @@ require("lsp.setup")
 require("lsp.ui")
 require("lsp.null-ls")
 require("lsp.cmp")
+
+vim.cmd([[imap <silent><script><expr> <C-y> copilot#Accept("\<CR>")]])
+vim.g.copilot_no_tab_map = true
+vim.cmd([[highlight CopilotSuggestion guifg=#555555 ctermfg=8]])

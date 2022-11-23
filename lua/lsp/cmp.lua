@@ -50,14 +50,14 @@ cmp.setup({
 	}),
 
 	mapping = {
-		["<C-i>"] = vim.schedule_wrap(function(fallback)
+		["<Tab>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
 				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 			else
 				fallback()
 			end
 		end),
-		["<C-k>"] = vim.schedule_wrap(function(fallback)
+		["<S-Tab>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
 				cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
 			else
