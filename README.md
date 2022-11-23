@@ -22,6 +22,12 @@ brew install neovim
 alias vi='nvim'
 ```
 
+### Install Requirements
+
+```bash
+pip install autopep8, isort
+```
+
 ### Overall Structure
 
 ```bash

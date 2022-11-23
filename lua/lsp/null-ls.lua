@@ -11,7 +11,8 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		-- Diagnostics
-		diagnostics.flake8,
+		-- diagnostics.flake8,
+		diagnostics.pylint,
 		-- Formatting ---------------------
 		--  brew install shfmt
 		formatting.shfmt,
