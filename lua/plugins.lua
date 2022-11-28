@@ -36,25 +36,7 @@ packer.startup({
 		use("onsails/lspkind-nvim")
 		use({ "xiyaowong/nvim-transparent", as = "transparent" })
 		use("norcalli/nvim-colorizer.lua")
-		-- copilot
-		-- use({
-		-- 	"zbirenbaum/copilot.lua",
-		-- 	event = "VimEnter",
-		-- 	config = function()
-		-- 		vim.defer_fn(function()
-		-- 			require("copilot").setup()
-		-- 		end, 100)
-		-- 	end,
-		-- })
-		-- use({
-		-- 	"zbirenbaum/copilot-cmp",
-		-- 	after = { "copilot.lua" },
-		-- 	config = function()
-		-- 		require("copilot_cmp").setup({
-		-- 			method = "getCompletionsCycling",
-		-- 		})
-		-- 	end,
-		-- })
+		use("karb94/neoscroll.nvim")
 		-- autopairs
 		use({
 			"windwp/nvim-autopairs",
