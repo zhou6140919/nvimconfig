@@ -31,10 +31,10 @@ map("n", "sc", "<C-w>c", opt)
 -- 关闭其他
 map("n", "so", "<C-w>o", opt)
 -- 窗口之间跳转
-map("n", "<C-w>k", "<C-w>j", opt)
-map("n", "<C-w>i", "<C-w>k", opt)
-map("n", "<C-w>j", "<C-w>h", opt)
-map("n", "<C-w>l", "<C-w>l", opt)
+-- map("n", "<C-w>k", "<C-w>j", opt)
+-- map("n", "<C-w>i", "<C-w>k", opt)
+-- map("n", "<C-w>j", "<C-w>h", opt)
+-- map("n", "<C-w>l", "<C-w>l", opt)
 
 -- Terminal相关
 map("n", "<leader>t", ":sp | terminal<CR>", opt)
@@ -91,7 +91,7 @@ map("n", "<C-j>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<leader>q", ":Bdelete!<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bj", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
