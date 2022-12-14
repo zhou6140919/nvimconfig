@@ -43,13 +43,16 @@ null_ls.setup({
 	},
 	-- 保存自动格式化
 	on_attach = function(client)
+        local augroup = vim.api.nvim_create_augroup("LspFormatting", { clear = false })
 		if client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 			vim.api.nvim_create_autocmd("BufWritePre", {
+			    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr }),
 				group = augroup,
 				buffer = bufnr,
 				-- on 0.8, you should use vim.lsp.buf.format instead
-				callback = vim.lsp.buf.formatting_sync,
+				callback = function()
+                    vim.lsp.buf.format()
+                end,
 			})
 		end
 	end,
